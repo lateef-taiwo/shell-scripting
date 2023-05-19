@@ -1,0 +1,21 @@
+#!/bin/bash
+
+echo "Hello Babe"
+
+sleep 3
+
+echo "How are you"
+
+sleep 3
+
+echo "I love you"
+
+sleep 3
+
+echo "I will see you later"
+
+sleep 3
+
+echo "Bye!!"
+
+exit
