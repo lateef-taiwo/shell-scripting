@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Variables
-KEY_NAME="your_key_name"
+KEY_NAME="lampsh.pem"
 INSTANCE_TYPE="t2.micro"
 SECURITY_GROUP_NAME="lamp-security-group"
 SECURITY_GROUP_DESC="LAMP Stack Security Group"
