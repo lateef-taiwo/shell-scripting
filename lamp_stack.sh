@@ -15,8 +15,8 @@ aws ec2 authorize-security-group-ingress --group-name $SECURITY_GROUP_NAME --pro
 # Launch an EC2 instance
 INSTANCE_ID=$(aws ec2 run-instances --image-id $AMI_ID --count 1 --instance-type $INSTANCE_TYPE --key-name $KEY_NAME --security-groups $SECURITY_GROUP_NAME --query 'Instances[0].InstanceId' --output text)
 
-# echo "Waiting for instance to be in running state..."
-# aws ec2 wait instance-running --instance-ids $INSTANCE_ID
+echo "Waiting for instance to be in running state..."
+aws ec2 wait instance-running --instance-ids $INSTANCE_ID
 
 # Get the public IP address of the instance
 PUBLIC_IP=$(aws ec2 describe-instances --instance-ids $INSTANCE_ID --query 'Reservations[0].Instances[0].PublicIpAddress' --output text)
