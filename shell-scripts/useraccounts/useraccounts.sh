@@ -5,7 +5,7 @@
 # -username
 # -full name
 # -password
-# The username, password and host for the account will be displayes
+# The username, password and host for the account will be displayed
 # The user will be prompted to change their password on first login
 
 # Ensure script is executed with superuser privileges
@@ -29,7 +29,7 @@ echo
 echo 'You will be prompted to set a new password on your first login'
 
 # Create account
-useradd -c "${FULL_NAME}" -m ${USER_NAME}
+sudo useradd -c "${FULL_NAME}" -m ${USER_NAME}
 
 # Check if useradd command succedded
 if [[ "${?}" -ne 0 ]]
